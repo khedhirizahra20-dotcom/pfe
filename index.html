@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexiTrack — Connexion Admin</title>
+    <meta name="description" content="FlexiTrack — Système de détection de déséquilibre musculaire par capteurs EMG">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="login-container">
+        <!-- Branding Side -->
+        <div class="login-branding">
+            <div class="brand-content">
+                <div class="brand-logo">
+                    <div class="logo-icon">
+                        <i class="fa-solid fa-wave-square"></i>
+                    </div>
+                    <h1>FlexiTrack</h1>
+                </div>
+                <p class="brand-tagline">Système intelligent de détection de déséquilibre musculaire</p>
+                <div class="brand-features">
+                    <div class="feature">
+                        <i class="fa-solid fa-microchip"></i>
+                        <span>2 capteurs EMG — Érecteurs du rachis</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Analyse RMS en temps réel</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                        <span>Score d'équilibre global</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span>Suivi de progression par séance</span>
+                    </div>
+                </div>
+            </div>
+            <p class="brand-footer">© 2026 FlexiTrack — Tous droits réservés</p>
+        </div>
+
+        <!-- Login Card -->
+        <div class="login-form-side">
+            <div class="login-card">
+                <!-- Register Form (first time) -->
+                <div id="registerView" class="auth-view">
+                    <div class="auth-header">
+                        <div class="auth-icon">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <h2>Créer un compte Admin</h2>
+                        <p>Bienvenue ! Configurez votre mot de passe pour commencer.</p>
+                    </div>
+                    <form id="registerForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="regUsername">Nom d'utilisateur</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" id="regUsername" placeholder="admin" value="admin" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="regPassword">Mot de passe</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" id="regPassword" placeholder="Créez votre mot de passe" required minlength="4">
+                                <button type="button" class="toggle-password" tabindex="-1"><i class="fa-solid fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="regConfirm">Confirmer le mot de passe</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" id="regConfirm" placeholder="Confirmez votre mot de passe" required minlength="4">
+                                <button type="button" class="toggle-password" tabindex="-1"><i class="fa-solid fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div id="registerError" class="error-msg hidden"></div>
+                        <button type="submit" class="btn-submit">
+                            <span>Créer le compte</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Login Form (returning user) -->
+                <div id="loginView" class="auth-view hidden">
+                    <div class="auth-header">
+                        <div class="auth-icon">
+                            <i class="fa-solid fa-right-to-bracket"></i>
+                        </div>
+                        <h2>Connexion Admin</h2>
+                        <p>Entrez vos identifiants pour accéder au tableau de bord.</p>
+                    </div>
+                    <form id="loginForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="loginUsername">Nom d'utilisateur</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" id="loginUsername" placeholder="admin" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Mot de passe</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" id="loginPassword" placeholder="Votre mot de passe" required>
+                                <button type="button" class="toggle-password" tabindex="-1"><i class="fa-solid fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div id="loginError" class="error-msg hidden"></div>
+                        <button type="submit" class="btn-submit">
+                            <span>Se connecter</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

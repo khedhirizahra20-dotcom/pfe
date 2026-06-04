@@ -1,0 +1,17 @@
+{
+  "name": "flexitrack",
+  "version": "2.0.0",
+  "description": "Application de gestion clinique EMG",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.20.0",
+    "serialport": "^13.0.0",
+    "ws": "^8.20.0"
+  }
+}

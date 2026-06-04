@@ -1,0 +1,5 @@
+node_modules/
+*.db
+*.sqlite
+flexitrack_data.json
+.db_initialized
